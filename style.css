@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5, h5 {
   margin: 0;
 }
 
+/* ============= NAVBAR SECTION STARTS HERE ============= */
+  /* Put your navbar style codes here... */
+/* ============= NAVBAR SECTION STARTS HERE ============= */
+
 /* ============= HERO SECTION STARTS HERE ============= */
 
 .hero {
@@ -38,7 +42,7 @@ h1, h2, h3, h4, h5, h5 {
   position: absolute;
 
   /* The semi dark color cover */
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75); /* the 4th number is the opacity of the black background 0.0 = invisible, 1.0 = visible*/
 }
 
 /* Tablet display */
