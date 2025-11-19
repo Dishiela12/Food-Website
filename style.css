@@ -1,13 +1,54 @@
+/* Use mobile first approach, e.g. min-width and not max-width for better UI debugging */
+/* Remove unncessary spaces in the body element */
 body {
-  background-color: lightblue;
+  background-color: rgb(0, 0, 0); /* Made this black to match hero background color theme in case if it fails to display for some reason */
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 0;
 }
 
-h1 {
-  color: white;
-  text-align: center;
+/* Just in case a header element needs to be used, all the default spacing have been removed */
+h1, h2, h3, h4, h5, h5 {
+  padding: 0;
+  margin: 0;
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+/* ============= HERO SECTION STARTS HERE ============= */
+
+.hero {
+  width: 100%; /* Fixed, always occupies the full width regardless of screen size */
+  height: 100vh; /* Cannot use % since it doesn't work, so just use view height, vh = view height, also occupies the entire screen's height regradless of screen size */
+  
+  /* Background image (also regardless of screen sizes) */
+  background-image: url('./images/hero-bg.jpg');
+  background-size: cover; /* Make sure the image occupies the full visible view of hero section */
+  background-attachment: fixed; /* Image stays at same position even after scroll */
+  background-repeat: no-repeat;
+  background-position: center; /* Make sure to centers the image */
+  z-index: 5; /* THIS IS IMPORTANT to ensure the dark cover displays above and not below the hero */
 }
+
+.hero-dark-cover {
+  /* Occupies full width and height of it's parent which is the hero class */
+  width: 100%;
+  height: 100%;
+
+  /* We need this so it doesn't go in-line with other contents */
+  position: absolute;
+
+  /* The semi dark color cover */
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Tablet display */
+@media (min-width: 768px) {
+  
+}
+
+/* Desktop display */
+@media (min-width: 1024px) {
+
+}
+
+/* ============= HERO SECTION ENDS HERE ============= */
