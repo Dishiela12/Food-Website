@@ -5,7 +5,8 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  line-height: 0;
+  color: white;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 /* Just in case a header element needs to be used, all the default spacing have been removed */
@@ -31,6 +32,11 @@ h1, h2, h3, h4, h5, h5 {
   background-repeat: no-repeat;
   background-position: center; /* Make sure to centers the image */
   z-index: 5; /* THIS IS IMPORTANT to ensure the dark cover displays above and not below the hero */
+
+  /* Other styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-dark-cover {
@@ -43,16 +49,73 @@ h1, h2, h3, h4, h5, h5 {
 
   /* The semi dark color cover */
   background-color: rgba(0, 0, 0, 0.75); /* the 4th number is the opacity of the black background 0.0 = invisible, 1.0 = visible*/
+
+  z-index: 10;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 15;
+}
+
+.hero-center-content {
+  text-align: center; /* Make sure we center every text inside */
+}
+
+.hero-heading {
+  font-size: 2.75rem; /* Size for mobile */
+}
+
+.hero-subheading {
+  font-size: 1.25rem;  /* Size for mobile */
+  font-weight: normal;
+}
+
+.hero-button {
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgb(0, 81, 231);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  font-size: 1rem;
+  padding: 0.75rem 4rem 0.75rem 4rem;
+}
+
+.hero-button:hover {
+  transform: scale(1.1);
+  background: rgb(36, 113, 255);
 }
 
 /* Tablet display */
 @media (min-width: 768px) {
-  
+  .hero-heading {
+    font-size: 3.25rem; /* Size for tablet */
+  }
+  .hero-subheading {
+    font-size: 1.5rem;  /* Size for tablet */
+  }
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.825rem 6rem 0.825rem 6rem;
+  }
 }
 
 /* Desktop display */
 @media (min-width: 1024px) {
-
+  .hero-heading {
+    font-size: 4rem; /* Size for desktop */
+  }
+  .hero-subheading {
+    font-size: 1.75rem;  /* Size for desktop */
+  }
+  .hero-button {
+    font-size: 1rem;
+    padding: 1rem 8rem 1rem 8rem;
+  }
 }
 
 /* ============= HERO SECTION ENDS HERE ============= */
